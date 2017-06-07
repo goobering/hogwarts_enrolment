@@ -1,3 +1,10 @@
 body {
-    background-color: yellow;
+    background-color: darkgray;
+}
+
+html *
+{
+   font-size: 1em !important;
+   color: white !important;
+   font-family: Palatino !important;
 }
