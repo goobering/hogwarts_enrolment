@@ -5,12 +5,12 @@ class Student
 attr_reader :id
 attr_accessor :first_name, :last_name, :house, :age
 
-def initialize(first_name, last_name, house, age)
-  @id = id
-  @first_name = first_name
-  @last_name = last_name
-  @house = house
-  @age = age
+def initialize(options)
+  @id = options['id'].to_i
+  @first_name = options['first_name']
+  @last_name = options['last_name']
+  @house = options['house']
+  @age = options['age'].to_i
 end
 
 def save()
