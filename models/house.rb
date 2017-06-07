@@ -7,8 +7,8 @@ class House
 
   def initialize(options)
     @id = options['id'].to_i
-    @name = options[:name]
-    @logo_url = options[:logo_url]
+    @name = options['name']
+    @logo_url = options['logo_url']
   end
 
   def save()
@@ -33,7 +33,6 @@ class House
   def self.all()
     sql = "SELECT * FROM houses;"
     result = SqlRunner.run(sql)
-    return result.map { |house| 
-      House.new(house) }
+    return result.map { |house| House.new(house) }
   end
 end
