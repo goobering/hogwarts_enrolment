@@ -2,7 +2,8 @@
 <% for student in @students %>
 <p>First name: <%= student.first_name %></p>
 <p>Last name: <%= student.last_name %></p>
-<p>House: <%= student.find_house() %></p>
+<div><img src="<%= student.find_house().logo_url %>" alt=""><p>House: <%= student.find_house().name %></p></div>
+
 <p>Age: <%= student.age %></p>
 <hr />
 <% end %>

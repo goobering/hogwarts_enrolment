@@ -32,7 +32,7 @@ def find_house()
   sql = "SELECT * FROM houses WHERE houses.id = #{@house_id};"
   result = SqlRunner.run(sql)
   house = House.new(result.first())
-  return house.name
+  return house
 end
 
 def self.find(id)
