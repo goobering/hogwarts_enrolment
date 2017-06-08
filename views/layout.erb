@@ -3,14 +3,18 @@
 <head>
   <title>Hogwarts</title>
   <link rel="stylesheet" href="/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Bentham" rel="stylesheet"> 
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="/students">All students</a></li>
-      <li><a href="/student/new">Enroll student</a></li>
-    </ul>
-  </nav>
-  <%= yield %>
+  <div class="nav-container">
+    <div class="nav">
+      <div class="students"><a href="/students">All students</a></div>
+      <div class="new-student"><a href="/student/new">Enroll student</a></div>
+    </div>
+  </div>
+    
+  <div class="content">
+    <%= yield %>
+  </div>
 </body>
 </html>

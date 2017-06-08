@@ -1,9 +1,11 @@
-<p>Student roster</p>
-<% for student in @students %>
-<p>First name: <%= student.first_name %></p>
-<p>Last name: <%= student.last_name %></p>
-<div><img src="<%= student.find_house().logo_url %>" alt=""><p>House: <%= student.find_house().name %></p></div>
-
-<p>Age: <%= student.age %></p>
-<hr />
-<% end %>
+<div class="photo-grid-container">
+  <div class="photo-grid">
+    <%for student in @students %>
+      <div class="photo-grid-item">
+        <p><%= "#{student.first_name} #{student.last_name}" %></p>
+        <p><%= "Age #{student.age}." %></p>
+        <img class="student-photo" src="<%=student.find_house().logo_url%>" alt="<%=student.find_house().name%>">
+      </div>
+    <%end%>
+  </div>
+</div>
